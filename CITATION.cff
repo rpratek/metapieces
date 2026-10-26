@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Si vous utilisez ce dépôt ou ses mesures, merci de le citer ainsi."
+title: "Métapièce et Territoire : outils et mesures du livre « Les Métapièces »"
+authors:
+  - family-names: "Pratek"
+    given-names: "Richard"
+license: GPL-3.0-or-later
+repository-code: "https://github.com/rpratek/metapieces"
+abstract: >-
+  Outils, scripts de mesure et application de visualisation accompagnant le livre
+  « Les Métapièces : nouveau traité de stratégie aux échecs, de Cessoles à Carlsen ».
+  Les mesures sont une proposition de lecture, à refaire, à contredire et à améliorer.
+keywords:
+  - échecs
+  - stratégie
+  - Métapièces
+  - coopération des pièces
+  - Couple Moteur
