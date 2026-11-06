@@ -7,7 +7,7 @@ Produit : PREFIXE_courbes.png (évaluation du moteur + nombre d'attaquants A de 
 LIMITE : A n'est calculé qu'à partir du 20e demi-coup et pour un Roi roqué encore sur son aile (comme dans le livre).
 DÉFINITIONS (identiques à recherche/scripts/seuil_roque.py du dépôt) : zone du Roi = 12 cases (voisines du Roi + les trois cases
 devant lui à deux rangs) ; A = nombre de pièces adverses (Cavalier, Fou, Tour, Dame) qui attaquent au moins une case de la zone ;
-D = pièces du Roi qui la défendent ; le livre (p.507) mesure qu'à partir de A ≥ 3 le danger de mat à dix demi-coups est multiplié par environ sept.
+D = pièces du Roi qui la défendent ; le livre (Livre III, § 6.3) donne la probabilité de mat à dix demi-coups selon A : 0,36 % (A = 1), 1,21 % (A = 2), 3,02 % (A = 3), 5,27 % (A = 4).
 Événements repérés : échange de Dames (Cahier n° 11 : les échanges de pièces majeures dissolvent les Métapièces offensives), Tours doublées
 sur une colonne ou une rangée, Tour qui change d'aile par la 3ᵉ/6ᵉ rangée, première apparition de A ≥ 3, plus fortes bascules d'évaluation (Cahier n° 17)."""
 import sys,io,json,argparse,chess,chess.pgn,chess.engine
@@ -74,7 +74,7 @@ def main():
         if 'échange de Dames' in d['evt']: a1.axvline(d['n']/2,color='#9B1C1C',ls=':',lw=1.5); a1.text(d['n']/2+0.2,4.6,'échange\\nde Dames',fontsize=8,color='#9B1C1C')
     a2.step(x,[(d['Ab'] if d['Ab'] is not None else float('nan')) for d in L],where='post',color='#1F6FD1',lw=2,label='attaquants du Roi noir (par les Blancs)')
     a2.step(x,[(d['Aw'] if d['Aw'] is not None else float('nan')) for d in L],where='post',color='#F28C00',lw=2,label='attaquants du Roi blanc (par les Noirs)')
-    a2.axhline(3,color='#555',ls='--',lw=1); a2.text(0.3,3.1,'A = 3 : seuil du livre (danger × 7)',fontsize=8,color='#555')
+    a2.axhline(3,color='#555',ls='--',lw=1); a2.text(0.3,3.1,'A = 3 : 3,02 % de mats à 10 demi-coups (livre, § 6.3)',fontsize=8,color='#555')
     a2.set_ylabel('A : pièces qui menacent\nla zone du Roi'); a2.set_xlabel('Numéro du coup'); a2.legend(fontsize=8,loc='upper left'); a2.set_ylim(-0.2,max(5,max([d['Ab'] or 0 for d in L]+[d['Aw'] or 0 for d in L])+1))
     h=g.headers; a1.set_title(f"{h.get('White','?')} – {h.get('Black','?')} ({h.get('Event','?')}, {h.get('Date','?')}) : évaluation et attaquants",fontsize=10)
     plt.tight_layout(); plt.savefig(a.sortie+'_courbes.png')
@@ -102,7 +102,7 @@ def main():
         if d['evt']: R.append(f"- coup {(d['n']+1)//2}{'...' if d['n']%2==0 else '.'} {d['san']} : {' ; '.join(d['evt'])}")
     prem=[d for d in L if (d['Ab'] or 0)>=3]; premw=[d for d in L if (d['Aw'] or 0)>=3]
     R.append("\n## Unités qui visent le Roi adverse (définition de la section 10.5 : neuf cases)\n"); R.append("| coup | unités du camp qui vient de jouer |\n|---|---|\n"+"\n".join(f"| {(d['n']+1)//2}{'...' if d['n']%2==0 else '.'} {d['san']} | {d['U']} |" for d in L[1:] if d['n']>=40))
-    R.append("\n## Seuil A ≥ 3 (page 507 du livre)\n")
+    R.append("\n## Seuil A ≥ 3 (Livre III, § 6.3 du livre)\n")
     R.append(f"- Roi noir : première fois à A ≥ 3 : {('coup '+str((prem[0]['n']+1)//2)) if prem else 'jamais'} ; maximum {max([d['Ab'] or 0 for d in L])} (Roi roqué seulement).")
     R.append(f"- Roi blanc : première fois à A ≥ 3 : {('coup '+str((premw[0]['n']+1)//2)) if premw else 'jamais'} ; maximum {max([d['Aw'] or 0 for d in L])} (Roi roqué seulement).")
     sw=sorted([(abs(L[i]['ev']-L[i-1]['ev']),L[i]) for i in range(1,len(L))],key=lambda t:-t[0])[:5]

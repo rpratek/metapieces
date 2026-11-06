@@ -1,6 +1,6 @@
 # Partie commentée de la section 8.5 — mesures reproductibles
 
-*Dossier d'exemple, comme `carlsen_nakamura/` et `fontaine_mvl/` : la partie (PGN), les deux scripts qui la mesurent, et ce guide. Voir la section 8.5 du livre (pages 197 à 200).*
+*Dossier d'exemple, comme `carlsen_nakamura/` et `fontaine_mvl/` : la partie (PGN), les deux scripts qui la mesurent, et ce guide. Voir la section 8.5 du livre.*
 
 Partie : Vachier-Lagrave – Nepomniachtchi, Julius Baer Generation Cup 2024 (Division I, perdants), ronde 1.1, chess.com, 28 septembre 2024, partie rapide (10 minutes + 2 secondes par coup).
 
@@ -54,7 +54,7 @@ Julius Baer Generation Cup 2024, Division I, Losers · 2024.09.28 · résultat a
 | 32... Qe4+ | 1 |
 | 33. Kg3 | 3 |
 
-## Seuil A ≥ 3 (page 507 du livre)
+## Seuil A ≥ 3 (Livre III, § 6.3 du livre)
 
 - Roi noir : première fois à A ≥ 3 : coup 28 ; maximum 4 (Roi roqué seulement).
 - Roi blanc : première fois à A ≥ 3 : jamais ; maximum 2 (Roi roqué seulement).
