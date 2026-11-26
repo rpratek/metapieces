@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Salle de Bal</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
@@ -115,7 +116,7 @@ textarea{width:100%;box-sizing:border-box;min-height:70px;background:var(--btn);
       <div class="err" id="err"></div>
     </div>
 
-    <p class="rule"><b>Comment le territoire est tracé.</b> Une case appartient au camp qui la contrôle avec plus de pièces que l'adversaire — même une seule, si l'adversaire n'en a aucune ; deux pièces alignées dans la même direction (une Dame devant un Fou, deux Tours) comptent toutes les deux. Les deux rangées de départ du camp ne comptent pas : le territoire se conquiert vers l'avant. Les cases conquises sont regroupées en aires d'un seul tenant ; une aire qui touche la zone centrale (c3 à f6) est le territoire proprement dit, les autres sont des territoires d'aile (teinte claire, bordure pointillée). Autour du Roi adverse, chaque case est conquise, menacée, en équilibre ou défendue (petits carrés vert, orange, gris, rouge). Le Roi lui-même ne conquiert pas de territoire. Quand un Roi est en échec avec au plus une case de fuite, ou mis en échec à répétition, il est « traqué » : l’initiative de l’adversaire prime alors sur l’espace. L’Indice Métapièce réunit ces mesures dans l’ordre de la règle (Roi traqué 4, verdict autour du Roi 2, pièce active 0,5, case de territoire ou de balance 0,1) ; on le lit comme une évaluation : équilibre jusqu’à 1,7, avantage jusqu’à 3,4, net avantage jusqu’à 5,7, décisif au-delà. Une pièce est active si son retrait ferait perdre à son camp du territoire, de l’attaque ou de la défense ; les pièces inactives portent un petit « z ». L’estocade désigne la pièce dont le retrait affaiblirait le plus l’attaque (anneau doré plein), et celle qui la prépare (anneau pointillé). Avec « Motifs », les structures de pions classiques sont reconnues par leur nom (Carlsbad, pion-dame isolé, pions pendants, Caro-Kann, Slave, Stonewall, étau de Maróczy, Hérisson, Dragon, Scheveningue, trou de Boleslavski, Bénoni, chaînes d5 et e5), avec leur plan typique. Le code ECO de l’ouverture vient de la base publique de Lichess (noms en anglais). Le couple moteur (Livre II, § 2.1) se mesure autour du Roi adverse : la puissance additionne les pièces qui frappent le Roi ou ses cases voisines (Dame 3, Tour 2, Fou et Cavalier 1, pion 0,5), la coopération compte les cases voisines visées par au moins deux pièces, l’embrayage, entre 0 et 1, baisse avec le nombre de défenseurs et de cases de fuite ; le couple est leur produit. Le bouton « Motifs » dessine la géométrie de la position : la boîte où le Roi adverse est enfermé (les cases qu’il peut atteindre sans traverser une case attaquée, dans un carré ou un rectangle en pointillé), les murs qui la ferment (une rangée ou une colonne entièrement attaquée), le rempart de pions devant un Roi, les chaînes de pions en diagonale, et les couloirs, lignes libres qui mènent une Dame, une Tour ou un Fou jusqu’au Roi. Ces mesures comptent les pièces sans tenir compte de leur valeur : elles indiquent où regarder, elles ne remplacent pas le calcul.</p>
+    <p class="rule"><b>Comment le territoire est tracé.</b> Une case appartient au camp qui la contrôle avec plus de pièces que l'adversaire — même une seule, si l'adversaire n'en a aucune ; deux pièces alignées dans la même direction (une Dame devant un Fou, deux Tours) comptent toutes les deux. Les deux rangées de départ du camp ne comptent pas : le territoire se conquiert vers l'avant. Les cases conquises sont regroupées en aires d'un seul tenant ; une aire qui touche la zone centrale (c3 à f6) est le territoire proprement dit, les autres sont des territoires d'aile (teinte claire, bordure pointillée). Autour du Roi adverse, chaque case est conquise, menacée, en équilibre ou défendue (petits carrés vert, orange, gris, rouge). Le Roi lui-même ne conquiert pas de territoire. Quand un Roi est en échec avec au plus une case de fuite, ou mis en échec à répétition, il est « traqué » : l’initiative de l’adversaire prime alors sur l’espace. L’Indice Métapièce réunit ces mesures dans l’ordre de la règle (Roi traqué 4, verdict autour du Roi 2, pièce active 0,5, case de territoire ou de balance 0,1) ; on le lit comme une évaluation : équilibre jusqu’à 1,7, avantage jusqu’à 3,4, net avantage jusqu’à 5,7, décisif au-delà. Une pièce est active si son retrait ferait perdre à son camp du territoire, de l’attaque ou de la défense ; les pièces inactives portent un petit « z ». L’estocade désigne la pièce dont le retrait affaiblirait le plus l’attaque (anneau doré plein), et celle qui la prépare (anneau pointillé). Quand le Roi adverse n’a plus de case de fuite, la Salle de Bal cherche le coup de grâce : la pièce qui peut le mater tout de suite, sinon celles qui peuvent lui donner échec, sinon celle qui peut venir frapper en deux coups ; si aucune ne le peut, elle l’indique : mat impossible. Avec « Motifs », les structures de pions classiques sont reconnues par leur nom (Carlsbad, pion-dame isolé, pions pendants, Caro-Kann, Slave, Stonewall, étau de Maróczy, Hérisson, Dragon, Scheveningue, trou de Boleslavski, Bénoni, chaînes d5 et e5), avec leur plan typique. Le code ECO de l’ouverture vient de la base publique de Lichess (noms en anglais). Le couple moteur (Livre II, § 2.1) se mesure autour du Roi adverse : la puissance additionne les pièces qui frappent le Roi ou ses cases voisines (Dame 3, Tour 2, Fou et Cavalier 1, pion 0,5), la coopération compte les cases voisines visées par au moins deux pièces, l’embrayage, entre 0 et 1, baisse avec le nombre de défenseurs et de cases de fuite ; le couple est leur produit. Le bouton « Motifs » dessine la géométrie de la position : la boîte où le Roi adverse est enfermé (les cases qu’il peut atteindre sans traverser une case attaquée, dans un carré ou un rectangle en pointillé), les murs qui la ferment (une rangée ou une colonne entièrement attaquée), le rempart de pions devant un Roi, les chaînes de pions en diagonale, et les couloirs, lignes libres qui mènent une Dame, une Tour ou un Fou jusqu’au Roi. Ces mesures comptent les pièces sans tenir compte de leur valeur : elles indiquent où regarder, elles ne remplacent pas le calcul.</p>
   </div>
 </div>
 </div>
@@ -639,6 +640,7 @@ function render(){
     zv.push(`<b>Estocade des ${LP[c]}</b> : ${art(es.main)}${nm(es.main)} ${es.main.checker?'frappe (échec)':'porte le coup'}${es.aide?' ; '+art(es.aide)+nm(es.aide)+' le prépare':''}.`); }
   for(const col of ['w','b']) if(H[col]){ const h=H[col], att=col==='w'?'b':'w';
     zv.unshift(`<b>Roi ${LB[col]} traqué</b> : ${h.nowCheck?'en échec, ':''}${h.esc} case${h.esc>1?'s':''} de fuite${h.checks>=2?', '+h.checks+' échecs sur ses trois derniers tours':''}. L’initiative des ${LP[att]} prime sur le territoire.`); }
+  for(const sd of sides){ try{ const cg=coupDeGrace(fen,sd); if(cg) zv.push(cg); }catch(e){} }
   if(state.geo && STRUCT){ const st=STRUCT.st; zv.push(`<b>Structure de pions : ${st.n}</b>${STRUCT.inv?' (couleurs inversées)':''} — ${STRUCT.inv?'même plan, rôles des Blancs et des Noirs échangés : ':''}${st.plan}`); }
   if(state.geo){ const seenT=new Set(); for(const sd of sides){ const t=geoText(GEO[sd],sd); for(const line of t.split('<br>')) if(line&&!seenT.has(line)){ seenT.add(line); zv.push(line); } } }
   document.getElementById('verdict').innerHTML=[v,...zv].filter(Boolean).map(t=>`<div>${t}</div>`).join('');
@@ -655,6 +657,36 @@ function render(){
     if(top<mv.scrollTop) mv.scrollTop=top-4; else if(bot>mv.scrollTop+mv.clientHeight) mv.scrollTop=bot-mv.clientHeight+4; }
 }
 const EN={K:'R',Q:'D',R:'T',B:'F',N:'C'};
+// Coup de grâce : quand le Roi adverse n'a plus de case de fuite, quelle pièce peut porter l'estocade ?
+function coupDeGrace(fen,s){
+  const B=boardArray(fen), ki=kingInfo(B,s); if(!ki || ki.esc.length) return null;
+  const d=s==='w'?'b':'w', RN=d==='w'?'blanc':'noir', L={w:'Blancs',b:'Noirs'}[s];
+  const sqn=(f,r)=>'abcdefgh'[f]+(r+1);
+  const ch=new Chess(fen);
+  if(ch.in_checkmate()) return null; // le mat est déjà annoncé plus haut
+  if(ch.in_stalemate()) return `<b>Pat</b> : le Roi ${RN} n’a plus de case de fuite mais n’est pas en échec, et son camp n’a plus aucun coup : la partie est nulle.`;
+  const parts=fen.split(' '), turnS=parts[1]===s;
+  const f2=[parts[0],s,parts[2],'-',parts[4]||'0',parts[5]||'1'].join(' ');
+  const c=new Chess(); if(!c.load(f2)) return `<b>Roi ${RN} sans case de fuite</b>, et en échec : il doit parer par une prise ou une interposition.`;
+  const nm=m=>`${NOMS[m.piece]||'Roi'} ${m.from}`, au=turnS?'':` (si les ${L} avaient le trait)`;
+  const mates=[], checks=[];
+  for(const m of c.moves({verbose:true})){ c.move(m); if(c.in_checkmate()) mates.push(m); else if(c.in_check()) checks.push(m); c.undo(); }
+  if(mates.length) return `<b>Roi ${RN} sans case de fuite — coup de grâce${au}</b> : ${mates.slice(0,3).map(m=>frSan(m.san)+' ('+nm(m)+')').join(', ')} porte l’estocade.`;
+  if(checks.length){ const who=[...new Set(checks.map(nm))].slice(0,4).join(', ');
+    return `<b>Roi ${RN} sans case de fuite, mais pas de mat immédiat${au}</b> : échecs possibles (${checks.slice(0,4).map(m=>frSan(m.san)).join(', ')}), que la défense peut parer. Pièces candidates à l’estocade : ${who}.`; }
+  // aucune pièce ne donne échec : laquelle peut venir menacer en deux coups ?
+  const near=new Map();
+  for(const m1 of c.moves({verbose:true})){ if(m1.piece==='k') continue; c.move(m1);
+    const g=c.fen().split(' '), f3=[g[0],s,g[2],'-',g[4],g[5]].join(' '), c3=new Chess();
+    if(c3.load(f3)){ for(const m2 of c3.moves({verbose:true})){ if(m2.from!==m1.to) continue; c3.move(m2);
+        const mate=c3.in_checkmate(), chk=c3.in_check(); c3.undo();
+        if(mate||chk){ const k=nm(m1), v=near.get(k), sc=mate?2:1; if(!v||sc>v.sc) near.set(k,{sc,path:frSan(m1.san)+' puis '+frSan(m2.san)+(mate?' (mat si rien n’est fait)':'')}); } } }
+    c.undo(); }
+  const best=[...near.entries()].sort((a,b)=>b[1].sc-a[1].sc).slice(0,3);
+  if(best.length) return `<b>Roi ${RN} sans case de fuite, mais mat impossible au prochain coup</b> : aucune pièce des ${L} ne peut donner échec. Il faut amener l’estocade : ${best.map(([k,v])=>k+' — '+v.path).join(' ; ')}.`;
+  return `<b>Roi ${RN} sans case de fuite, mais mat impossible</b> : aucune pièce des ${L} ne peut lui donner échec, ni en un coup ni en deux. La prison est fermée, mais personne ne vient frapper.`;
+}
+
 function frSan(m){ let t=m; if(/^[KQRBN]/.test(t)) t=EN[t[0]]+t.slice(1); return t.replace(/=([QRBN])/,(x,p)=>'='+EN[p]); }
 
 /* ---------- commandes ---------- */
