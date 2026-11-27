@@ -96,6 +96,8 @@ textarea{width:100%;box-sizing:border-box;min-height:70px;background:var(--btn);
       <div class="seg"><button id="kingBtn" aria-pressed="true">Roi adverse</button></div>
       <div class="label">Géométrie</div>
       <div class="seg"><button id="geoBtn" aria-pressed="false">Motifs</button></div>
+      <div class="label">Catalogue</div>
+      <div class="seg"><button id="mpBtn" aria-pressed="true">Métapièces</button></div>
     </div>
 
     <div class="card">
@@ -116,7 +118,7 @@ textarea{width:100%;box-sizing:border-box;min-height:70px;background:var(--btn);
       <div class="err" id="err"></div>
     </div>
 
-    <p class="rule"><b>Comment le territoire est tracé.</b> Une case appartient au camp qui la contrôle avec plus de pièces que l'adversaire — même une seule, si l'adversaire n'en a aucune ; deux pièces alignées dans la même direction (une Dame devant un Fou, deux Tours) comptent toutes les deux. Les deux rangées de départ du camp ne comptent pas : le territoire se conquiert vers l'avant. Les cases conquises sont regroupées en aires d'un seul tenant ; une aire qui touche la zone centrale (c3 à f6) est le territoire proprement dit, les autres sont des territoires d'aile (teinte claire, bordure pointillée). Autour du Roi adverse, chaque case est conquise, menacée, en équilibre ou défendue (petits carrés vert, orange, gris, rouge). Le Roi lui-même ne conquiert pas de territoire. Quand un Roi est en échec avec au plus une case de fuite, ou mis en échec à répétition, il est « traqué » : l’initiative de l’adversaire prime alors sur l’espace. L’Indice Métapièce réunit ces mesures dans l’ordre de la règle (Roi traqué 4, verdict autour du Roi 2, pièce active 0,5, case de territoire ou de balance 0,1) ; on le lit comme une évaluation : équilibre jusqu’à 1,7, avantage jusqu’à 3,4, net avantage jusqu’à 5,7, décisif au-delà. Une pièce est active si son retrait ferait perdre à son camp du territoire, de l’attaque ou de la défense ; les pièces inactives portent un petit « z ». L’estocade désigne la pièce dont le retrait affaiblirait le plus l’attaque (anneau doré plein), et celle qui la prépare (anneau pointillé). Quand le Roi adverse n’a plus de case de fuite, la Salle de Bal cherche le coup de grâce : la pièce qui peut le mater tout de suite, sinon celles qui peuvent lui donner échec, sinon celle qui peut venir frapper en deux coups ; si aucune ne le peut, elle l’indique : mat impossible. Avec « Motifs », les structures de pions classiques sont reconnues par leur nom (Carlsbad, pion-dame isolé, pions pendants, Caro-Kann, Slave, Stonewall, étau de Maróczy, Hérisson, Dragon, Scheveningue, trou de Boleslavski, Bénoni, chaînes d5 et e5), avec leur plan typique. Le code ECO de l’ouverture vient de la base publique de Lichess (noms en anglais). Le couple moteur (Livre II, § 2.1) se mesure autour du Roi adverse : la puissance additionne les pièces qui frappent le Roi ou ses cases voisines (Dame 3, Tour 2, Fou et Cavalier 1, pion 0,5), la coopération compte les cases voisines visées par au moins deux pièces, l’embrayage, entre 0 et 1, baisse avec le nombre de défenseurs et de cases de fuite ; le couple est leur produit. Le bouton « Motifs » dessine la géométrie de la position : la boîte où le Roi adverse est enfermé (les cases qu’il peut atteindre sans traverser une case attaquée, dans un carré ou un rectangle en pointillé), les murs qui la ferment (une rangée ou une colonne entièrement attaquée), le rempart de pions devant un Roi, les chaînes de pions en diagonale, et les couloirs, lignes libres qui mènent une Dame, une Tour ou un Fou jusqu’au Roi. Ces mesures comptent les pièces sans tenir compte de leur valeur : elles indiquent où regarder, elles ne remplacent pas le calcul.</p>
+    <p class="rule"><b>Comment le territoire est tracé.</b> Une case appartient au camp qui la contrôle avec plus de pièces que l'adversaire — même une seule, si l'adversaire n'en a aucune ; deux pièces alignées dans la même direction (une Dame devant un Fou, deux Tours) comptent toutes les deux. Les deux rangées de départ du camp ne comptent pas : le territoire se conquiert vers l'avant. Les cases conquises sont regroupées en aires d'un seul tenant ; une aire qui touche la zone centrale (c3 à f6) est le territoire proprement dit, les autres sont des territoires d'aile (teinte claire, bordure pointillée). Autour du Roi adverse, chaque case est conquise, menacée, en équilibre ou défendue (petits carrés vert, orange, gris, rouge). Le Roi lui-même ne conquiert pas de territoire. Quand un Roi est en échec avec au plus une case de fuite, ou mis en échec à répétition, il est « traqué » : l’initiative de l’adversaire prime alors sur l’espace. L’Indice Métapièce réunit ces mesures dans l’ordre de la règle (Roi traqué 4, verdict autour du Roi 2, pièce active 0,5, case de territoire ou de balance 0,1) ; on le lit comme une évaluation : équilibre jusqu’à 1,7, avantage jusqu’à 3,4, net avantage jusqu’à 5,7, décisif au-delà. Une pièce est active si son retrait ferait perdre à son camp du territoire, de l’attaque ou de la défense ; les pièces inactives portent un petit « z ». L’estocade désigne la pièce dont le retrait affaiblirait le plus l’attaque (anneau doré plein), et celle qui la prépare (anneau pointillé). Le bouton « Métapièces » nomme les configurations du catalogue (Livre II, chapitre 3) : la coalition qui frappe le Roi adverse ou ses cases voisines est comparée aux Binômes, Trinômes et Quatuors du catalogue (B1 à B13, T1 à T8, S1 à S4), ses pièces sont entourées en pointillé ; les Métapièces de structure — batteries B3 et B4, Aqueduc B2 tourné vers le Roi, Trône de la Crête B6, Convoi Royal B7, pions liés T5, paire de Fous B5 — sont reconnues par leur géométrie. Une coalition qui n’entre pas au catalogue est signalée comme telle. Quand le Roi adverse n’a plus de case de fuite, la Salle de Bal cherche le coup de grâce : la pièce qui peut le mater tout de suite, sinon celles qui peuvent lui donner échec, sinon celle qui peut venir frapper en deux coups ; si aucune ne le peut, elle l’indique : mat impossible. Avec « Motifs », les structures de pions classiques sont reconnues par leur nom (Carlsbad, pion-dame isolé, pions pendants, Caro-Kann, Slave, Stonewall, étau de Maróczy, Hérisson, Dragon, Scheveningue, trou de Boleslavski, Bénoni, chaînes d5 et e5), avec leur plan typique. Le code ECO de l’ouverture vient de la base publique de Lichess (noms en anglais). Le couple moteur (Livre II, § 2.1) se mesure autour du Roi adverse : la puissance additionne les pièces qui frappent le Roi ou ses cases voisines (Dame 3, Tour 2, Fou et Cavalier 1, pion 0,5), la coopération compte les cases voisines visées par au moins deux pièces, l’embrayage, entre 0 et 1, baisse avec le nombre de défenseurs et de cases de fuite ; le couple est leur produit. Le bouton « Motifs » dessine la géométrie de la position : la boîte où le Roi adverse est enfermé (les cases qu’il peut atteindre sans traverser une case attaquée, dans un carré ou un rectangle en pointillé), les murs qui la ferment (une rangée ou une colonne entièrement attaquée), le rempart de pions devant un Roi, les chaînes de pions en diagonale, et les couloirs, lignes libres qui mènent une Dame, une Tour ou un Fou jusqu’au Roi. Ces mesures comptent les pièces sans tenir compte de leur valeur : elles indiquent où regarder, elles ne remplacent pas le calcul.</p>
   </div>
 </div>
 </div>
@@ -174,7 +176,7 @@ function splitPGN(text){
   });
 }
 
-let state={fens:[],sans:[],ply:0,mode:'territoire',side:'w',king:true,geo:false,flip:false,name:''};
+let state={fens:[],sans:[],ply:0,mode:'territoire',side:'w',king:true,geo:false,mp:true,flip:false,name:''};
 
 function loadGame(name,text,start,fen,eco){
   const ch=new Chess(); if(fen && !ch.load(fen)) throw new Error('Position de départ (FEN) illisible.');
@@ -598,7 +600,8 @@ function render(){
   for(let i=0;i<8;i++){ const fl=state.flip?7-i:i, rk=state.flip?i:7-i;
     coords+=`<text x="${M+i*S+S/2}" y="${M+8*S+15}" text-anchor="middle" font-size="12" fill="${css('--muted')}" font-family="Inter,sans-serif">${'abcdefgh'[fl]}</text>`;
     coords+=`<text x="${M-8}" y="${M+i*S+S/2+4}" text-anchor="middle" font-size="12" fill="${css('--muted')}" font-family="Inter,sans-serif">${rk+1}</text>`; }
-  document.getElementById('board').innerHTML=base+fx+geo+pcs+marks+coords;
+  let mpr=''; if(state.mp) for(const sd of sides){ try{ const M=metapieces(fen,sd); for(const m of M.ring){ const [x,y]=xy(m.f,m.r); mpr+=`<circle cx="${x+S/2}" cy="${y+S/2}" r="${S/2-3}" fill="none" stroke="${sd==='w'?css('--gold'):css('--blue')}" stroke-width="3" stroke-dasharray="5 4"/>`; } }catch(e){} }
+  document.getElementById('board').innerHTML=base+fx+geo+pcs+mpr+marks+coords;
 
   // mesure
   const ch=new Chess(fen); const stats=[];
@@ -641,6 +644,7 @@ function render(){
   for(const col of ['w','b']) if(H[col]){ const h=H[col], att=col==='w'?'b':'w';
     zv.unshift(`<b>Roi ${LB[col]} traqué</b> : ${h.nowCheck?'en échec, ':''}${h.esc} case${h.esc>1?'s':''} de fuite${h.checks>=2?', '+h.checks+' échecs sur ses trois derniers tours':''}. L’initiative des ${LP[att]} prime sur le territoire.`); }
   for(const sd of sides){ try{ const cg=coupDeGrace(fen,sd); if(cg) zv.push(cg); }catch(e){} }
+  if(state.mp) for(const sd of sides){ try{ const M=metapieces(fen,sd); for(const l of M.lines) zv.push(l); }catch(e){} }
   if(state.geo && STRUCT){ const st=STRUCT.st; zv.push(`<b>Structure de pions : ${st.n}</b>${STRUCT.inv?' (couleurs inversées)':''} — ${STRUCT.inv?'même plan, rôles des Blancs et des Noirs échangés : ':''}${st.plan}`); }
   if(state.geo){ const seenT=new Set(); for(const sd of sides){ const t=geoText(GEO[sd],sd); for(const line of t.split('<br>')) if(line&&!seenT.has(line)){ seenT.add(line); zv.push(line); } } }
   document.getElementById('verdict').innerHTML=[v,...zv].filter(Boolean).map(t=>`<div>${t}</div>`).join('');
@@ -657,6 +661,96 @@ function render(){
     if(top<mv.scrollTop) mv.scrollTop=top-4; else if(bot>mv.scrollTop+mv.clientHeight) mv.scrollTop=bot-mv.clientHeight+4; }
 }
 const EN={K:'R',Q:'D',R:'T',B:'F',N:'C'};
+
+// ---------- Identification des Métapièces du catalogue (Livre II, chapitre 3) ----------
+const CATA={ 'BN':['B1','Duo Fou + Cavalier','Le Phare et la Forteresse'], 'BQ':['B2','Duo Dame + Fou','L’Aqueduc'], 'QR':['B3','Duo Dame + Tour','batterie lourde'],
+ 'RR':['B4','Duo Tour + Tour','batterie de Tours'], 'BB':['B5','Duo deux Fous','paire de Fous'], 'NP':['B6','Duo Cavalier + Pion','Trône de la Crête'],
+ 'KP':['B7','Duo Pion + Roi','Le Convoi Royal'], 'BR':['B8','Duo Tour + Fou',''], 'NQ':['B9','Duo Dame + Cavalier',''], 'NR':['B10','Duo Tour + Cavalier',''],
+ 'PQ':['B11','Duo Dame + Pion',''], 'KQ':['B12','Duo Roi + Dame',''], 'KR':['B12','Duo Roi + Tour',''], 'QQ':['B13','Duo Dame + Dame',''],
+ 'BNQ':['T1','Trio Dame + Fou + Cavalier','Le Trinôme d’attaque'], 'BQR':['T2','Trio Dame + Tour + Fou','Le Trio de Siège'], 'NNP':['T3','Trio deux Cavaliers + Pion','La Triple Fourche'],
+ 'BKN':['T4','Trio Roi + Cavalier + Fou','mat élémentaire'], 'NQR':['T6','Trio Dame + Tour + Cavalier','Les Rabatteurs'], 'BBQ':['T7','Trio Dame + 2 Fous','La Garde Croisée'],
+ 'PQR':['T8','Trio Dame + Tour + Pion','La Cale'], 'BQRR':['S4','Quatuor Dame + deux Tours + Fou','Quatuor de siège'] };
+const LET={q:'Q',r:'R',b:'B',n:'N',p:'P',k:'K'};
+const sqN=(f,r)=>'abcdefgh'[f]+(r+1);
+const label=c=>`<b>${c[0]} — ${c[1]}</b>${c[2]?' « '+c[2]+' »':''}`;
+function coalition(B,s){ // pièces de s qui frappent le Roi adverse ou ses cases voisines
+  const d=s==='w'?'b':'w'; let k=null, ks=null;
+  for(let f=0;f<8;f++) for(let r=0;r<8;r++){ const p=B[f][r]; if(p&&p.t==='k'){ if(p.c===d) k=[f,r]; else ks=[f,r]; } }
+  if(!k) return null;
+  const zone=[]; for(let a=-1;a<=1;a++) for(let b=-1;b<=1;b++){ const x=k[0]+a,y=k[1]+b; if(x>=0&&x<8&&y>=0&&y<8) zone.push([x,y]); }
+  const hit=A=>{ let n=0,sq=0; for(const [x,y] of zone){ n+=A[x][y]; if(A[x][y]) sq++; } return [n,sq]; };
+  const base=hit(attacks(B,s,k,false)); const mem=[];
+  for(let f=0;f<8;f++) for(let r=0;r<8;r++){ const p=B[f][r]; if(!p||p.c!==s||p.t==='k') continue;
+    const X=B.map(c=>c.slice()); X[f][r]=null; if(hit(attacks(X,s,k,false))[0]<base[0]) mem.push({t:p.t,f,r}); }
+  if(ks && Math.max(Math.abs(ks[0]-k[0]),Math.abs(ks[1]-k[1]))===2) mem.push({t:'k',f:ks[0],r:ks[1]});
+  return {k,mem,squares:base[1]};
+}
+function classify(types){ const key=t=>t.map(x=>LET[x]).sort().join(''); return CATA[key(types)]||null; }
+function metapieces(fen,s){
+  const B=boardArray(fen), c=coalition(B,s), out={lines:[],ring:[]};
+  if(!c) return out;
+  const d=s==='w'?'b':'w', RN=d==='w'?'blanc':'noir';
+  let mate=false; try{ mate=new Chess(fen).in_checkmate(); }catch(e){}
+  const mem=c.mem, desc=m=>`${(NOMS[m.t]||'Roi')} ${sqN(m.f,m.r)}`;
+  if(mem.length>=2 && c.squares>=2 && mem.some(m=>m.t!=='p'&&m.t!=='k')){
+    const types=mem.map(m=>m.t); let cat=classify(types), used=mem;
+    let skip=false;
+    if(!cat){ const np=mem.filter(m=>m.t!=='p'&&m.t!=='k'); if(np.length<2) skip=true; else if(np.length<mem.length){ used=np; const c2=classify(np.map(m=>m.t)); if(c2) cat=c2; } }
+    if(mate && used.length===2){ const ty=used.map(m=>m.t).sort().join('');
+      if(ty==='bb') cat=['S1','Tenaille diagonale','mat de Boden'];
+      if(ty==='nr' && (c.k[0]===0||c.k[0]===7) && (c.k[1]===0||c.k[1]===7)) cat=['S2','Coin scellé (Tour + Cavalier)',''];
+      if(ty==='br') cat=['B8','Duo Tour + Fou', mayet(B,s,c.k,used)?'Le mat de Mayet':'mat de type Opéra']; }
+    if(!skip){ const who=used.map(desc).join(' + ');
+    if(cat) out.lines.push(`${label(cat)}${mate?' — elle donne le mat':''} : ${who}, contre le Roi ${RN}.`);
+    else { const n=used.length, nm=n===2?'Binôme':n===3?'Trinôme':n===4?'Quadrinôme':'Pentanôme';
+      let sub=''; if(n>=3){ const np=used.filter(m=>m.t!=='p'&&m.t!=='k');
+        for(let i=0;i<np.length&&!sub;i++) for(let j=i+1;j<np.length&&!sub;j++) for(let l=j+1;l<np.length&&!sub;l++){ const t=classify([np[i].t,np[j].t,np[l].t]); if(t) sub=` — il contient un ${t[0]} (${t[1]})`; }
+        for(let i=0;i<np.length&&!sub;i++) for(let j=i+1;j<np.length&&!sub;j++){ const t=classify([np[i].t,np[j].t]); if(t) sub=` — il contient un ${t[0]} (${t[1]})`; } }
+      out.lines.push(`<b>${nm}${n<=3?' hors catalogue':''}</b>${sub} : ${who}, contre le Roi ${RN}.`); }
+    out.ring.push(...used); }
+  }
+  if(mate && !out.lines.length){ const solo=mem.filter(m=>m.t!=='p'&&m.t!=='k'); if(solo.length===1){ out.lines.push(`<b>Monôme</b> — il donne le mat seul : ${desc(solo[0])}, contre le Roi ${RN}.`); out.ring.push(solo[0]); } }
+  // Métapièces de structure, reconnues par leur géométrie
+  const P=(f,r,t,c=s)=>f>=0&&f<8&&r>=0&&r<8&&B[f][r]&&B[f][r].c===c&&B[f][r].t===t;
+  const list=t=>{ const o=[]; for(let f=0;f<8;f++) for(let r=0;r<8;r++) if(P(f,r,t)) o.push([f,r]); return o; };
+  const clear=(a,b)=>{ if(!(a[0]===b[0]||a[1]===b[1]||Math.abs(a[0]-b[0])===Math.abs(a[1]-b[1]))) return false; const df=Math.sign(b[0]-a[0]), dr=Math.sign(b[1]-a[1]); let x=a[0]+df,y=a[1]+dr; while(x!==b[0]||y!==b[1]){ if(B[x][y]) return false; x+=df; y+=dr; } return true; };
+  const rel=r=>s==='w'?r:7-r, fwd=s==='w'?1:-1;
+  const pawnOnFile=(f,c)=>{ for(let r=0;r<8;r++) if(P(f,r,'p',c)) return true; return false; };
+  const R=list('r'), Q=list('q'), Bi=list('b'), N=list('n'), Pw=list('p');
+  const usefulFile=f=>!pawnOnFile(f,s);
+  const struct=[];
+  if(R.length>=2 && clear(R[0],R[1]) && ((R[0][0]===R[1][0] && usefulFile(R[0][0])) || (R[0][1]===R[1][1] && rel(R[0][1])===6)))
+    struct.push([CATA.RR,`Tours ${sqN(...R[0])} et ${sqN(...R[1])}, ${R[0][0]===R[1][0]?'colonne '+'abcdefgh'[R[0][0]]:'7e rangée'}`]);
+  for(const q of Q) for(const r of R) if(clear(q,r) && ((q[0]===r[0] && usefulFile(q[0])) || (q[1]===r[1] && rel(q[1])===6)))
+    struct.push([CATA.QR,`Dame ${sqN(...q)} et Tour ${sqN(...r)}`]);
+  for(const q of Q) for(const b of Bi) if(Math.abs(q[0]-b[0])===Math.abs(q[1]-b[1]) && clear(q,b)){
+    const df=Math.sign(q[0]-b[0]), dr=Math.sign(q[1]-b[1]), front=(Math.abs(q[0]-c.k[0])+Math.abs(q[1]-c.k[1])<Math.abs(b[0]-c.k[0])+Math.abs(b[1]-c.k[1]))?q:b;
+    const ddf=front===q?df:-df, ddr=front===q?dr:-dr; let x=front[0]+ddf,y=front[1]+ddr,hitK=false;
+    while(x>=0&&x<8&&y>=0&&y<8){ if(Math.max(Math.abs(x-c.k[0]),Math.abs(y-c.k[1]))<=1){ hitK=true; break; } if(B[x][y]) break; x+=ddf; y+=ddr; }
+    if(hitK) struct.push([CATA.BQ,`Dame ${sqN(...q)} et Fou ${sqN(...b)}, en batterie vers le Roi ${RN}`]); }
+  for(const n of N){ const rr=rel(n[1]); if(rr<3||rr>5) continue;
+    const sup=P(n[0]-1,n[1]-fwd,'p')||P(n[0]+1,n[1]-fwd,'p'); if(!sup) continue;
+    let safe=true; for(const df of [-1,1]){ const f=n[0]+df; if(f<0||f>7) continue; for(let r=n[1]+fwd; r>=0&&r<8; r+=fwd) if(P(f,r,'p',d)) safe=false; }
+    if(safe) struct.push([CATA.NP,`Cavalier ${sqN(...n)}, soutenu par un pion, hors de portée des pions adverses`]); }
+  let pieces=0; for(let f=0;f<8;f++) for(let r=0;r<8;r++){ const q=B[f][r]; if(q&&q.t!=='p'&&q.t!=='k') pieces++; }
+  if(pieces<=3){ let K=null; for(let f=0;f<8;f++) for(let r=0;r<8;r++) if(P(f,r,'k')) K=[f,r];
+    for(const pw of Pw){ let passed=true; for(const df of [-1,0,1]){ const f=pw[0]+df; if(f<0||f>7) continue; for(let r=pw[1]+fwd;r>=0&&r<8;r+=fwd) if(P(f,r,'p',d)) passed=false; }
+      if(passed && K && Math.max(Math.abs(K[0]-pw[0]),Math.abs(K[1]-(pw[1]+fwd)))<=1){ struct.push([CATA.KP,`pion passé ${sqN(...pw)} escorté par le Roi ${sqN(...K)}`]); break; } } }
+  for(let f=0;f<6;f++){ const col=[0,1,2].map(i=>{ let best=-1; for(let r=0;r<8;r++) if(P(f+i,r,'p') && rel(r)>=4) best=r; return best; });
+    if(col.every(r=>r>=0) && Math.max(...col)-Math.min(...col)<=1){ struct.push([['T5','Trio de pions liés','pions connectés avancés'],`pions ${col.map((r,i)=>sqN(f+i,r)).join(', ')}`]); break; } }
+  let oppB=0; for(let f=0;f<8;f++) for(let r=0;r<8;r++) if(P(f,r,'b',d)) oppB++;
+  if(Bi.length===2 && oppB<2 && state.ply>=16){ const mob=b=>{ let n=0; for(const [a,c2] of [[1,1],[1,-1],[-1,1],[-1,-1]]){ let x=b[0]+a,y=b[1]+c2; while(x>=0&&x<8&&y>=0&&y<8){ n++; if(B[x][y]) break; x+=a; y+=c2; } } return n; };
+    if(mob(Bi[0])>=7 && mob(Bi[1])>=7) struct.push([CATA.BB,`Fous ${sqN(...Bi[0])} et ${sqN(...Bi[1])}, tous deux actifs, face à un seul Fou adverse ou aucun`]); }
+  const shown=new Set(out.lines.join(' ').match(/\b[BTS]\d+\b/g)||[]);
+  const st=struct.filter(x=>!shown.has(x[0][0])).slice(0,3);
+  if(st.length) out.lines.push(`<span style="opacity:.85">Structure : ${st.map(x=>`<b>${x[0][0]}</b> ${x[0][2]||x[0][1]} (${x[1]})`).join(' ; ')}.</span>`);
+  return out;
+}
+function mayet(B,s,k,used){ const R=used.find(m=>m.t==='r'), Bf=used.find(m=>m.t==='b'); if(!R||!Bf) return false;
+  if(Math.max(Math.abs(R.f-k[0]),Math.abs(R.r-k[1]))!==1) return false;
+  if(Math.max(Math.abs(Bf.f-k[0]),Math.abs(Bf.r-k[1]))<=1) return false;
+  if(Math.abs(Bf.f-R.f)!==Math.abs(Bf.r-R.r)) return false;
+  const df=Math.sign(R.f-Bf.f), dr=Math.sign(R.r-Bf.r); let x=Bf.f+df,y=Bf.r+dr; while(x!==R.f||y!==R.r){ if(B[x][y]) return false; x+=df; y+=dr; } return true; }
 // Coup de grâce : quand le Roi adverse n'a plus de case de fuite, quelle pièce peut porter l'estocade ?
 function coupDeGrace(fen,s){
   const B=boardArray(fen), ki=kingInfo(B,s); if(!ki || ki.esc.length) return null;
@@ -701,6 +795,7 @@ document.addEventListener('keydown',e=>{ if(e.target.tagName==='TEXTAREA') retur
 function seg(id,attr,key){ document.getElementById(id).onclick=e=>{ const b=e.target.closest('button'); if(!b) return;
   [...document.getElementById(id).children].forEach(x=>x.setAttribute('aria-pressed', x===b?'true':'false')); state[key]=b.dataset[attr]; render(); }; }
 seg('modes','mode','mode'); seg('sides','side','side');
+document.getElementById('mpBtn').onclick=e=>{ state.mp=!state.mp; e.target.setAttribute('aria-pressed',state.mp); render(); };
 document.getElementById('geoBtn').onclick=e=>{ state.geo=!state.geo; e.target.setAttribute('aria-pressed',state.geo); render(); };
 document.getElementById('kingBtn').onclick=e=>{ state.king=!state.king; e.target.setAttribute('aria-pressed',state.king); render(); };
 const sel=document.getElementById('game');
